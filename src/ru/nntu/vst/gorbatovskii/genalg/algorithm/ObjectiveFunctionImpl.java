@@ -8,6 +8,7 @@ import java.util.List;
 
 public class ObjectiveFunctionImpl implements ObjectiveFunction {
 
+    @Override
     public int calculate(List<Vertex> chromosome, Graph graph) {
         int result = 0;
         for (Edge edge : graph.getEdges()) {

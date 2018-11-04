@@ -24,6 +24,7 @@ public class TournamentSelection implements SelectionAlgorithm {
         this.tournamentRange = tournamentRange;
     }
 
+    @Override
     public List<List<Vertex>> executeSelection(List<List<Vertex>> chromosomes, int population, Graph graph) {
         Assert.isTrue(chromosomes.size() >= tournamentRange,
                 "Tournament range can't be greater than current population size");
@@ -38,6 +39,7 @@ public class TournamentSelection implements SelectionAlgorithm {
         final List<Pair<Integer, List<Vertex>>> valuedChromosomes = valueChromosome(chromosomes, graph);
         return IntStream.range(0, population).parallel().mapToObj(
                 new IntFunction<List<Vertex>>() {
+
                     @Override
                     public List<Vertex> apply(int value) {
                         return composeParticipants(chromosomes.size()).parallelStream()
@@ -50,6 +52,7 @@ public class TournamentSelection implements SelectionAlgorithm {
 
     private List<Pair<Integer, List<Vertex>>> valueChromosome(List<List<Vertex>> chromosomes, Graph graph) {
         return chromosomes.parallelStream().map(new Function<List<Vertex>, Pair<Integer, List<Vertex>>>() {
+
             @Override
             public Pair<Integer, List<Vertex>> apply(List<Vertex> vertices) {
                 return new Pair<>(objectiveFunction.calculate(vertices, graph), vertices);
@@ -64,7 +67,7 @@ public class TournamentSelection implements SelectionAlgorithm {
         for (int j = 0; j < tournamentRange; j++) {
 
             while (true) {
-                int chromosomeNumber = random.nextInt() % chromosomesCount;
+                int chromosomeNumber = Math.abs(random.nextInt() % chromosomesCount);
                 if (!tournamentParticipants.contains(chromosomeNumber)) {
                     tournamentParticipants.add(chromosomeNumber);
                     break;

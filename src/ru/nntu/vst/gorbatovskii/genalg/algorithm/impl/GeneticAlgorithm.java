@@ -9,10 +9,14 @@ import ru.nntu.vst.gorbatovskii.genalg.model.Graph;
 import ru.nntu.vst.gorbatovskii.genalg.model.Vertex;
 import ru.nntu.vst.gorbatovskii.genalg.utils.RandomUtils;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.IntFunction;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class GeneticAlgorithm {
 
@@ -30,7 +34,7 @@ public class GeneticAlgorithm {
     }
 
     public List<Vertex> processForGraph(Graph graph, int populationCount) {
-        List<List<Vertex>> population = composeInitialPopulation();
+        List<List<Vertex>> population = composeInitialPopulation(graph);
         for (int populationNumber = 0; populationNumber < populationCount; populationNumber++) {
             population = executeSelection(executeMutation(executeReproduction(population)), graph);
         }
@@ -45,8 +49,14 @@ public class GeneticAlgorithm {
         }).get();
     }
 
-    private List<List<Vertex>> composeInitialPopulation() {
-        return null;
+    private List<List<Vertex>> composeInitialPopulation(Graph graph) {
+        return IntStream.range(0, populationSize).parallel().mapToObj(new IntFunction<List<Vertex>>() {
+
+            @Override
+            public List<Vertex> apply(int value) {
+                return Arrays.asList(RandomUtils.shuffleArray(graph.getVertices().toArray(new Vertex[]{})));
+            }
+        }).collect(Collectors.toList());
     }
 
     private List<List<Vertex>> executeReproduction(List<List<Vertex>> population) {

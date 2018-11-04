@@ -39,14 +39,12 @@ public class TournamentSelection implements SelectionAlgorithm {
                                                  final Graph graph) {
 
         final List<Pair<Integer, List<Vertex>>> valuedChromosomes = valueChromosome(chromosomes, graph);
-//        return IntStream.range(0, population).parallel().mapToObj(
-        return IntStream.range(0, population).mapToObj(
+        return IntStream.range(0, population).parallel().mapToObj(
                 new IntFunction<List<Vertex>>() {
 
                     @Override
                     public List<Vertex> apply(int value) {
-                        return composeParticipants(chromosomes.size()).parallelStream()
-//                        return composeParticipants(chromosomes.size()).stream()
+                        return composeParticipants(chromosomes.size()).stream()
                                 .map(valuedChromosomes::get)
                                 .min(Comparator.comparing(Pair::getFirst))
                                 .get().getSecond();
@@ -56,7 +54,6 @@ public class TournamentSelection implements SelectionAlgorithm {
 
     private List<Pair<Integer, List<Vertex>>> valueChromosome(List<List<Vertex>> chromosomes, Graph graph) {
         return chromosomes.parallelStream().map(new Function<List<Vertex>, Pair<Integer, List<Vertex>>>() {
-//        return chromosomes.stream().map(new Function<List<Vertex>, Pair<Integer, List<Vertex>>>() {
 
             @Override
             public Pair<Integer, List<Vertex>> apply(List<Vertex> vertices) {

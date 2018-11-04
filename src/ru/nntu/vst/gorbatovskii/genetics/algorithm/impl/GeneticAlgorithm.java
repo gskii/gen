@@ -50,8 +50,7 @@ public class GeneticAlgorithm {
     }
 
     private List<List<Vertex>> composeInitialPopulation(Graph graph) {
-        return IntStream.range(0, populationSize).parallel().mapToObj(new IntFunction<List<Vertex>>() {
-//        return IntStream.range(0, populationSize).mapToObj(new IntFunction<List<Vertex>>() {
+        return IntStream.range(0, populationSize).mapToObj(new IntFunction<List<Vertex>>() {
 
             @Override
             public List<Vertex> apply(int value) {
@@ -72,7 +71,6 @@ public class GeneticAlgorithm {
 
     private List<List<Vertex>> executeMutation(List<List<Vertex>> population) {
         population.parallelStream().forEach(new Consumer<List<Vertex>>() {
-//        population.stream().forEach(new Consumer<List<Vertex>>() {
 
             @Override
             public void accept(List<Vertex> chromosome) {

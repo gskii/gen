@@ -20,7 +20,7 @@ public class Application {
         graph.setVertices(ApplicationContextUtils.getApplicationContext()
                 .getBeansOfType(Vertex.class).values().stream().collect(Collectors.toList()));
         long t1 = System.currentTimeMillis();
-        List<Vertex> result = algorithm.processForGraph(graph, 5000);
+        List<Vertex> result = algorithm.processForGraph(graph, 50);
         long t2 = System.currentTimeMillis();
 
         ObjectiveFunction function = (ObjectiveFunction) ApplicationContextUtils.getApplicationContext().getBean("objectiveFunction");

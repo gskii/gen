@@ -1,5 +1,6 @@
-package ru.nntu.vst.gorbatovskii.genalg.algorithm;
+package ru.nntu.vst.gorbatovskii.genalg.algorithm.impl;
 
+import ru.nntu.vst.gorbatovskii.genalg.algorithm.ObjectiveFunction;
 import ru.nntu.vst.gorbatovskii.genalg.model.Edge;
 import ru.nntu.vst.gorbatovskii.genalg.model.Graph;
 import ru.nntu.vst.gorbatovskii.genalg.model.Vertex;

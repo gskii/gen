@@ -1,5 +1,6 @@
-package ru.nntu.vst.gorbatovskii.genalg.algorithm;
+package ru.nntu.vst.gorbatovskii.genalg.algorithm.impl;
 
+import ru.nntu.vst.gorbatovskii.genalg.algorithm.MutationAlgorithm;
 import ru.nntu.vst.gorbatovskii.genalg.model.Vertex;
 
 import java.util.Arrays;

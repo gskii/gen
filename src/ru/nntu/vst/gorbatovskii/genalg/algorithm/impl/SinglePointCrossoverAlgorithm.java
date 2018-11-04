@@ -1,6 +1,7 @@
-package ru.nntu.vst.gorbatovskii.genalg.algorithm;
+package ru.nntu.vst.gorbatovskii.genalg.algorithm.impl;
 
 import org.springframework.util.Assert;
+import ru.nntu.vst.gorbatovskii.genalg.algorithm.CrossoverAlgorithm;
 import ru.nntu.vst.gorbatovskii.genalg.model.Vertex;
 
 import java.util.Arrays;

@@ -1,8 +1,10 @@
-package ru.nntu.vst.gorbatovskii.genalg.algorithm;
+package ru.nntu.vst.gorbatovskii.genalg.algorithm.impl;
 
 import org.jgrapht.alg.util.Pair;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.util.Assert;
+import ru.nntu.vst.gorbatovskii.genalg.algorithm.ObjectiveFunction;
+import ru.nntu.vst.gorbatovskii.genalg.algorithm.SelectionAlgorithm;
 import ru.nntu.vst.gorbatovskii.genalg.model.Graph;
 import ru.nntu.vst.gorbatovskii.genalg.model.Vertex;
 

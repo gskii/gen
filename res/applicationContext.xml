@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="v1" class="ru.nntu.vst.gorbatovskii.genalg.model.Vertex">
+        <constructor-arg name="name" value="v1"/>
+    </bean>
+
+    <bean id="v2" class="ru.nntu.vst.gorbatovskii.genalg.model.Vertex">
+        <constructor-arg name="name" value="v2"/>
+    </bean>
+
+    <bean id="v3" class="ru.nntu.vst.gorbatovskii.genalg.model.Vertex">
+        <constructor-arg name="name" value="v3"/>
+    </bean>
+
+    <bean id="e1_2" class="ru.nntu.vst.gorbatovskii.genalg.model.Edge">
+        <constructor-arg name="vertexA" ref="v1"/>
+        <constructor-arg name="vertexB" ref="v2"/>
+    </bean>
+
+    <bean id="e2_3" class="ru.nntu.vst.gorbatovskii.genalg.model.Edge">
+        <constructor-arg name="vertexA" ref="v2"/>
+        <constructor-arg name="vertexB" ref="v3"/>
+    </bean>
+
+    <bean id="e1_3" class="ru.nntu.vst.gorbatovskii.genalg.model.Edge">
+        <constructor-arg name="vertexA" ref="v1"/>
+        <constructor-arg name="vertexB" ref="v3"/>
+    </bean>
+</beans>

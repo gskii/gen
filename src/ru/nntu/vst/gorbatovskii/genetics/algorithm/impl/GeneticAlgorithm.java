@@ -70,7 +70,7 @@ public class GeneticAlgorithm {
     }
 
     private List<List<Vertex>> executeMutation(List<List<Vertex>> population) {
-        population.parallelStream().forEach(new Consumer<List<Vertex>>() {
+        population.stream().forEach(new Consumer<List<Vertex>>() {
 
             @Override
             public void accept(List<Vertex> chromosome) {

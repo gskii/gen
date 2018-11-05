@@ -1,5 +1,6 @@
 package ru.nntu.vst.gorbatovskii.genetics;
 
+import javafx.util.Pair;
 import ru.nntu.vst.gorbatovskii.genetics.algorithm.ObjectiveFunction;
 import ru.nntu.vst.gorbatovskii.genetics.algorithm.impl.GeneticAlgorithm;
 import ru.nntu.vst.gorbatovskii.genetics.model.Edge;
@@ -7,7 +8,11 @@ import ru.nntu.vst.gorbatovskii.genetics.model.Graph;
 import ru.nntu.vst.gorbatovskii.genetics.model.Vertex;
 import ru.nntu.vst.gorbatovskii.genetics.utils.ApplicationContextUtils;
 
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Application {

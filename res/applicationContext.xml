@@ -72,6 +72,11 @@
         <constructor-arg name="vertexB" ref="v7"/>
     </bean>
 
+    <bean id="e5_6" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v5"/>
+        <constructor-arg name="vertexB" ref="v6"/>
+    </bean>
+
     <bean id="e8_7" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
         <constructor-arg name="vertexA" ref="v8"/>
         <constructor-arg name="vertexB" ref="v7"/>
@@ -88,7 +93,7 @@
     </bean>
 
     <bean id="geneticAlgorithm" class="ru.nntu.vst.gorbatovskii.genetics.algorithm.impl.GeneticAlgorithm">
-        <constructor-arg name="populationSize" value="5000"/>
+        <constructor-arg name="populationSize" value="50"/>
         <constructor-arg name="mutationRate" value="0.2"/>
         <property name="selectionAlgorithm" ref="selectionAlgorithm"/>
         <property name="crossoverAlgorithm" ref="crossoverAlgorithm"/>

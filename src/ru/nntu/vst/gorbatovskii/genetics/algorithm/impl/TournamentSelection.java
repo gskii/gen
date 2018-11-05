@@ -39,7 +39,7 @@ public class TournamentSelection implements SelectionAlgorithm {
                                                  final Graph graph) {
 
         final List<Pair<Integer, List<Vertex>>> valuedChromosomes = valueChromosome(chromosomes, graph);
-        return IntStream.range(0, population).parallel().mapToObj(
+        return IntStream.range(0, population).mapToObj(
                 new IntFunction<List<Vertex>>() {
 
                     @Override
@@ -53,7 +53,7 @@ public class TournamentSelection implements SelectionAlgorithm {
     }
 
     private List<Pair<Integer, List<Vertex>>> valueChromosome(List<List<Vertex>> chromosomes, Graph graph) {
-        return chromosomes.parallelStream().map(new Function<List<Vertex>, Pair<Integer, List<Vertex>>>() {
+        return chromosomes.stream().map(new Function<List<Vertex>, Pair<Integer, List<Vertex>>>() {
 
             @Override
             public Pair<Integer, List<Vertex>> apply(List<Vertex> vertices) {

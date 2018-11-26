@@ -36,6 +36,27 @@
         <constructor-arg name="name" value="v8"/>
     </bean>
 
+    <bean id="v9" class="ru.nntu.vst.gorbatovskii.genetics.model.Vertex">
+        <constructor-arg name="name" value="v9"/>
+    </bean>
+
+    <bean id="v10" class="ru.nntu.vst.gorbatovskii.genetics.model.Vertex">
+        <constructor-arg name="name" value="v10"/>
+    </bean>
+
+    <bean id="v11" class="ru.nntu.vst.gorbatovskii.genetics.model.Vertex">
+        <constructor-arg name="name" value="v11"/>
+    </bean>
+
+    <bean id="v12" class="ru.nntu.vst.gorbatovskii.genetics.model.Vertex">
+        <constructor-arg name="name" value="v12"/>
+    </bean>
+
+    <bean id="v13" class="ru.nntu.vst.gorbatovskii.genetics.model.Vertex">
+        <constructor-arg name="name" value="v13"/>
+    </bean>
+
+
     <!-- Edges -->
     <bean id="e1_2" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
         <constructor-arg name="vertexA" ref="v1"/>
@@ -47,8 +68,8 @@
         <constructor-arg name="vertexB" ref="v3"/>
     </bean>
 
-    <bean id="e1_4" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
-        <constructor-arg name="vertexA" ref="v1"/>
+    <bean id="e3_4" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v3"/>
         <constructor-arg name="vertexB" ref="v4"/>
     </bean>
 
@@ -62,24 +83,59 @@
         <constructor-arg name="vertexB" ref="v6"/>
     </bean>
 
-    <bean id="e4_8" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
-        <constructor-arg name="vertexA" ref="v4"/>
-        <constructor-arg name="vertexB" ref="v8"/>
-    </bean>
-
     <bean id="e5_7" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
         <constructor-arg name="vertexA" ref="v5"/>
         <constructor-arg name="vertexB" ref="v7"/>
     </bean>
 
-    <bean id="e5_6" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+    <bean id="e5_8" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
         <constructor-arg name="vertexA" ref="v5"/>
-        <constructor-arg name="vertexB" ref="v6"/>
+        <constructor-arg name="vertexB" ref="v8"/>
     </bean>
 
-    <bean id="e8_7" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+    <bean id="e6_9" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v6"/>
+        <constructor-arg name="vertexB" ref="v9"/>
+    </bean>
+
+    <bean id="e7_9" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v7"/>
+        <constructor-arg name="vertexB" ref="v9"/>
+    </bean>
+
+    <bean id="e8_2" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
         <constructor-arg name="vertexA" ref="v8"/>
-        <constructor-arg name="vertexB" ref="v7"/>
+        <constructor-arg name="vertexB" ref="v2"/>
+    </bean>
+
+    <bean id="e2_10" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v2"/>
+        <constructor-arg name="vertexB" ref="v10"/>
+    </bean>
+
+    <bean id="e10_11" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v10"/>
+        <constructor-arg name="vertexB" ref="v11"/>
+    </bean>
+
+    <bean id="e10_12" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v10"/>
+        <constructor-arg name="vertexB" ref="v12"/>
+    </bean>
+
+    <bean id="e11_13" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v11"/>
+        <constructor-arg name="vertexB" ref="v13"/>
+    </bean>
+
+    <bean id="e12_13" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v12"/>
+        <constructor-arg name="vertexB" ref="v13"/>
+    </bean>
+
+    <bean id="e13_2" class="ru.nntu.vst.gorbatovskii.genetics.model.Edge">
+        <constructor-arg name="vertexA" ref="v13"/>
+        <constructor-arg name="vertexB" ref="v2"/>
     </bean>
 
     <!-- Algorithm configuration -->
